@@ -1,5 +1,6 @@
 import personalImage from "../images/mark.jpg";
 import ReactTooltip from 'react-tooltip';
+import Tilt from 'react-tilt';
 
 export default function About() {
     return (
@@ -61,25 +62,35 @@ export default function About() {
                         </li>
                     </ul>
                 </div>
+                
                 <ReactTooltip id="github" place="bottom" type="dark" effect="solid">
                     <span className="bg-inherit text-[20px]">Visit my GitHub page!</span>
                 </ReactTooltip>
+                
                 <ReactTooltip id="linkedin" place="bottom" type="dark" effect="solid">
                     <span className="bg-inherit text-[20px]">Visit my LinkedIn page!</span>
                 </ReactTooltip>
+                
                 <ReactTooltip id="instagram" place="bottom" type="dark" effect="solid">
                     <span className="bg-inherit text-[20px]">Visit my Instagram page!</span>
                 </ReactTooltip>
+                
                 <ReactTooltip id="telephone" place="bottom" type="dark" effect="solid">
                     <span className="bg-inherit text-[20px]">+1(905)-980-0302</span>
                 </ReactTooltip>
+                
                 <ReactTooltip id="email" place="bottom" type="dark" effect="solid">
                     <span className="bg-inherit text-[20px]">markaycruz@gmail.com</span>
                 </ReactTooltip>
+
             </div>
             <div className="w-[400px]">
-                <img src={personalImage}
-                className="shadow-2xl hover:" />
+                <Tilt options={{
+                    max: 5
+                }}>
+                    <img src={personalImage}
+                    className="shadow-2xl" />
+                </Tilt>
             </div>
         </div>
     )
